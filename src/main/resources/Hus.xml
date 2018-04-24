@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--注意mapper结点-->
+    <mapper namespace="com.wanyu.Mapper.IHusDao"><!--命名空间-->
+        <select id="getHus" parameterType="int" resultType="com.wanyu.model.Hus">
+            SELECT *FROM HUS WHERE id=#{id}
+        </select>
+    <!---注意id名字和接口中对应方法名字相同-->
+        <insert id="insertHus" parameterType="com.wanyu.model.Hus">
+            INSERT INTO HUS(id,hname) VALUES(#{id},#{hname})
+        </insert>
+    <update id="updateHus" parameterType="com.wanyu.model.Hus">
+        UPDATE HUS SET hname=#{hname} WHERE id=#{id}
+    </update>
+    <delete id="deleteHus" parameterType="int">
+        DELETE FROM HUS WHERE id=#{id}
+    </delete>
+    </mapper>

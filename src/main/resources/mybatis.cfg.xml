@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>     
+  
+     
+  
+<!DOCTYPE configuration PUBLIC      
+  
+    "-//mybatis.org//DTD Config 3.0//EN"     
+  
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">     
+  
+     
+  
+<configuration>    
+  
+    <environments default="development">     
+  
+        <environment id="development">     
+  
+            <transactionManager type="JDBC" />     
+  
+            <dataSource type="POOLED">     
+  
+              <property name="driver" value="org.gjt.mm.mysql.Driver" />     
+  
+              <property name="url" value="jdbc:mysql://127.0.0.1/stu?useUnicode=true&amp;characterEncoding=utf-8" />
+  
+              <property name="username" value="root" />     
+  
+              <property name="password" value="root" />     
+  
+            </dataSource>     
+  
+        </environment>     
+  
+    </environments>     
+  	 <!--<mappers>-->
+         <!--<mapper class="com.wanyu.mapper.UserMapper"/>-->
+        <!--<mapper class="com.wanyu.mapper.CompanyMapper"/>-->
+         <!--<mapper class="com.wanyu.mapper.EmpMapper"/>-->
+         <!--注解方式-->
+
+    <!--</mappers>  -->
+    <!--XML文档方式-->
+    <mappers>
+        <mapper resource="Hus.xml"></mapper>
+        <mapper resource="Father.xml"></mapper>
+        <mapper resource="Son.xml"></mapper>
+    </mappers>
+        
+  
+    </configuration>  
